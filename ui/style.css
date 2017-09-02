@@ -1,6 +1,6 @@
 body {
-   
-    margin-top: 75px;
+    margin: 0 auto;
+    
 }
 
 .center {
@@ -20,7 +20,7 @@ body {
 }
 
 .container{
-    margin: 0 auto;
+   
     padding: 0 15px;
     background-color: #59605c;
     color: #422923;
