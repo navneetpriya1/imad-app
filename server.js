@@ -46,7 +46,7 @@ var htmlTemplate= `
           </div>
     </body>
 </html>
-`
+`;
 }
 
 app.get('/', function (req, res) {
