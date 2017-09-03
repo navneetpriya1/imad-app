@@ -86,8 +86,8 @@ app.get('/counter',function(req, res){
    res.send(counter.toString());
 });
 
-app.get('/:articleNames', function(req, res){
-    res.send(createTemplate(articleNames[articles]));
+app.get('/:articleName', function(req, res){
+    res.send(createTemplate(articles[articleName]));
 });
 
 app.get('/article-two', function(req, res){
