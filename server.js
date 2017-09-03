@@ -5,7 +5,8 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var articleOne = {
+var articles ={
+    'article-One' : {
   title : 'navneet priya',
   date :  'sep 3,2017',
   heading : 'Article One',
@@ -15,6 +16,23 @@ var articleOne = {
         <p>this is a heading.this is a heading.this is a heading.this is a heading.this is a heading.this is a heading.this is a heading.this is a heading.this is a heading.this is a heading.this is a heading.this is a heading.this is a heading.this is a heading.this is a heading.this is a heading.this is a heading.this is a heading.this is a heading.this is a heading.this is a heading.this is a heading.this is a heading.this is a heading.this is a heading.
         </p>`
   
+},
+    'article-two' : { 
+  title : 'navneet priya',
+  date :  'sep 4,2017',
+  heading : 'Article two',
+  content : ` 
+        <p>this is a heading.this is a heading.this is a heading.this is a heading.this is a heading.this is a heading.this is a heading.this is a heading.this is a heading.this is a heading.this is a heading.this is a heading.this is a heading.this is a heading.this is a heading.this is a heading.this is a heading.this is a heading.this is a heading.this is a heading.
+        </p>`
+  },
+    'article-three' : {
+         title : 'navneet priya',
+  date :  'sep 5,2017',
+  heading : 'Article Three',
+  content : ` 
+        <p>this is a heading.this is a heading.this is a heading.this is a heading.this is a heading.this is a heading.this is a heading.
+        </p>`
+    }
 };
 
 function createTemplate(data){
@@ -68,8 +86,8 @@ app.get('/counter',function(req, res){
    res.send(counter.toString());
 });
 
-app.get('/article-one', function(req, res){
-    res.send(createTemplate(articleOne));
+app.get('/:articleNames', function(req, res){
+    res.send(createTemplate(articleNames[articles]));
 });
 
 app.get('/article-two', function(req, res){
