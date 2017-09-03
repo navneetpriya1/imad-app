@@ -5,7 +5,49 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+var articleOne = {
+  title : 'navneet priya',
+  date :  'sep 3,2017',
+  heading : 'Article One',
+  content : ` 
+        <p>this is a heading.this is a heading.this is a heading.this is a heading.this is a heading.this is a heading.this is a heading.this is a heading.this is a heading.this is a heading.this is a heading.this is a heading.this is a heading.this is a heading.this is a heading.this is a heading.this is a heading.this is a heading.this is a heading.this is a heading.
+        </p>
+        <p>this is a heading.this is a heading.this is a heading.this is a heading.this is a heading.this is a heading.this is a heading.this is a heading.this is a heading.this is a heading.this is a heading.this is a heading.this is a heading.this is a heading.this is a heading.this is a heading.this is a heading.this is a heading.this is a heading.this is a heading.this is a heading.this is a heading.this is a heading.this is a heading.this is a heading.
+        </p>`
+  
+};
 
+function createTemplate(data){
+    title = data.title;
+    date = data.date;
+    heading = data.heading;
+    content = data.content;
+var htmlTemplate= `
+<!DOCTYPE html>
+ <html>
+    <head>
+        <title> ${title} </title>
+            <link href="/ui/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+        <div>
+          <a href='/'>home</a>
+        </div>
+        <div>
+            ${date}
+        </div>
+        <div>
+          <h3>${heading}</h3>
+        </div>
+        <div>
+          ${content}
+          </div>
+          </div>
+    </body>
+</html>
+`
+}
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
@@ -26,7 +68,7 @@ app.get('/counter',function(req, res){
 });
 
 app.get('/article-one', function(req, res){
-    res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
+    res.send(createTemplate(articleOne));
 });
 
 app.get('/article-two', function(req, res){
