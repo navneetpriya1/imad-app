@@ -11,7 +11,7 @@ var counter = 0;
 var img = document.getElementById('madi');
 
 function moveRight(){
-    marginLeft= marginLeft + 5;
+    marginLeft= marginLeft + '5px';
     img.style.marginLeft = marginLeft + 'px';
 }
 
