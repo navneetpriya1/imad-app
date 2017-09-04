@@ -4,10 +4,12 @@ var button = document.getElementById('counter');
 button.onclick = function()  {
     var request = XMLHttpRequest();
     request.onreadystatechange = function(){
-      if(this.readyState === 4 && this.status === 200){
+      if(this.readyState === 4 ){
+          if(this.status === 200){
         var counter = request.responseText;
         var span= document.getElementById('count');
         span.innerHTML = counter.toString();
+          }
       }
     };
    request.open('GET','http://sroy7766.imad.hasura-app.io/',true);
