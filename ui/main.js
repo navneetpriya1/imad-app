@@ -8,7 +8,7 @@ var counter = 0;
    span.innerHTML = counter.toString();
 };*/
 
-var img = document.getElementById('img-medium');
+var img = document.getElementById('madi');
 
 function moveRight(){
     marginLeft= marginLeft + 5;
