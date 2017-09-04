@@ -12,7 +12,7 @@ button.onclick = function()  {
           }
       }
     };
-   request.open('GET','http://sroy7766.imad.hasura-app.io/',true);
+   request.open('GET','http://sroy7766.imad.hasura-app.io/counter',true);
    request.send(null);
   
 };
