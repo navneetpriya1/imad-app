@@ -29,3 +29,15 @@ function moveRight(){
 imge.onclick = function(){
     var interval = setInterval(moveRight + 100);
 };
+
+var nameInput = document.getElementById('name');
+var name = nameInput.value;
+var submit = document.getElementById('submit-btn');
+submit.onclick = function(){
+    var name = [name1,name2,name3,name4];
+    var list = "";
+    for(var i=0 ; i < name.length ; i++){
+        list+= '<li>'+name[i]+'</li>';
+    }
+    
+};
