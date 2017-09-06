@@ -55,11 +55,15 @@ request.open('GET','http://sroy7766.imad.hasura-app.io/submit-name?name=',true);
 request.send(null);
 };
 
-var ciityid = document.getElementById('weather'); 
+/*var ciityid = document.getElementById('weather'); 
 var submitw = document.getElementById('submitcity');
 submitw.onclick = function(){
-    
-};
+     var request = new XMLHttpRequest();
+        request.onreadystatechange = function(){
+        if(request.readyState === XMLHttpRequest.DONE ){
+        if(request.status === 200){
+            
+};*/
 
 
 
