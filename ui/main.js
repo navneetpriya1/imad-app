@@ -55,15 +55,21 @@ request.open('GET','http://sroy7766.imad.hasura-app.io/submit-name?name=' + name
 request.send(null);
 };
 
-/*var ciityid = document.getElementById('weather'); 
-var submitw = document.getElementById('submitcity');
-submitw.onclick = function(){
+var ciityid = document.getElementById('weather'); 
+var submit = document.getElementById('submitcity');
+submit.onclick = function(){
      var request = new XMLHttpRequest();
         request.onreadystatechange = function(){
         if(request.readyState === XMLHttpRequest.DONE ){
         if(request.status === 200){
-            
-};*/
-
+            var names = request.responseText;
+}
+  var ul = document.getElementById('citynames');
+    ul.innerHTML = names;
+        }
+};
+request.open('GET','http://sroy7766.imad.hasura-app.io//api.openweathermap.org/data/2.5/forecast?id=524901&APPID=052ff811408b1b970bf2d427e9331527' ,true);
+request.send(null);
+};
 
 
