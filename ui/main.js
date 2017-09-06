@@ -43,3 +43,12 @@ submit.onclick = function(){
     ul.innerHTML = list;
     
 };
+
+var ciityid = document.getElementById('weather'); 
+var submitw = document.getElementById('submitcity');
+submitw.onclick = function(){
+    
+};
+
+
+
