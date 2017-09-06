@@ -104,12 +104,12 @@ app.get('/:articleName', function(req, res){
 
 
 
-/*var info = [];
-app.get('/submit-id/:cityName', function(req, res){
-    var cityName = req.params.cityName;
+var info = [];
+app.get('http://api.openweathermap.org/data/2.5/forecast?id=524901&APPID=052ff811408b1b970bf2d427e9331527', function(req, res){
+    var cityName = req.query.cityName;
     info.push(cityName);
     res.send(info);
-});*/
+});
 
 
 // Do not change port, otherwise your app won't run on IMAD servers
