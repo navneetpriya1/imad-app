@@ -40,9 +40,9 @@ submit.onclick = function(){
             var names = request.responseText;
             //this is a string.convert to an array.
             names = JSON.parse(names);
-            var list = "";
+            var list = '';
             for(var i=0 ; i < names.length ; i++){
-            list+= '<li>'+names[i]+'</li>';
+            list += '<li>'+names[i]+'</li>';
     }
     var ul = document.getElementById('nameList');
     ul.innerHTML = list;
@@ -50,8 +50,8 @@ submit.onclick = function(){
         }
 };
 var nameInput = document.getElementById('name');
-var names = nameInput.value;
-request.open('GET','http://sroy7766.imad.hasura-app.io/submit-name?name=',true);
+var name = nameInput.value;
+request.open('GET','http://sroy7766.imad.hasura-app.io/submit-name?name=' + name,true);
 request.send(null);
 };
 
