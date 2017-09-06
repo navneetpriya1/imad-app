@@ -30,8 +30,7 @@ imge.onclick = function(){
     var interval = setInterval(moveRight + 100);
 };
 
-var nameInput = document.getElementById('name');
-var namez = nameInput.value;
+
 var submit = document.getElementById('submit-btn');
 submit.onclick = function(){
         var request = new XMLHttpRequest();
@@ -50,7 +49,8 @@ submit.onclick = function(){
         }
         }
 };
-
+var nameInput = document.getElementById('name');
+var namez = nameInput.value;
 request.open('GET','http://sroy7766.imad.hasura-app.io/submit-name?name=',true);
 request.send(null);
 };
