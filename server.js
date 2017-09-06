@@ -90,24 +90,26 @@ app.get('/counter',function(req, res){
    res.send(counter.toString());
 });
 
+var names = [];
+app.get('/submit-name', function(req, res){
+    var name = req.query.name;
+    names.push(name);
+    res.send(JSON.stringify(names));
+});
+
 app.get('/:articleName', function(req, res){
     var articleName = req.params.articleName;
     res.send(createTemplate(articles[articleName]));
 });
 
-var names = [];
-app.get('/submit-name/:name', function(req, res){
-    var name = req.params.name;
-    names.push(name);
-    res.send(JSON.stringify(names));
-});
 
-var info = [];
+
+/*var info = [];
 app.get('/submit-id/:cityName', function(req, res){
     var cityName = req.params.cityName;
     info.push(cityName);
     res.send(info);
-});
+});*/
 
 
 // Do not change port, otherwise your app won't run on IMAD servers
